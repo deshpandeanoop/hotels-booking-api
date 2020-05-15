@@ -11,7 +11,7 @@ import java.util.List;
 public class Rooms {
     private int roomNumber;
     private int price;
-    @CassandraType(type = DataType.Name.TUPLE)
+    @CassandraType(type = DataType.Name.LIST)
     private List<AmenityTuple> amenities;
     @PrimaryKey
     private String hotelName;

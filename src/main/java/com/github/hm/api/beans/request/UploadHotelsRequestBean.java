@@ -1,10 +1,14 @@
 package com.github.hm.api.beans.request;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.github.hm.api.beans.domain.Hotel;
 
 import java.util.List;
 
-public class UpdateHotelsRequestBean {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class UploadHotelsRequestBean {
     private int count;
     private List<Hotel> hotels;
 

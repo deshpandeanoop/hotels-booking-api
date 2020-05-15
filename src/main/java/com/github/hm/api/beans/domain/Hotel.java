@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Hotel {
     private String name;
+    private String phone;
     private List<PointOfInterest> pointOfInterests;
     private List<Room> rooms;
     private HotelAddress address;
@@ -38,5 +39,13 @@ public class Hotel {
 
     public void setAddress(HotelAddress address) {
         this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

@@ -37,4 +37,14 @@ public class HotelAddress {
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
+
+    public static com.github.hm.api.beans.db.keyspaces.hotels.HotelAddress cloneUDT(HotelAddress hotelAddress){
+        com.github.hm.api.beans.db.keyspaces.hotels.HotelAddress hotelAddressUDT = new com.github.hm.api.beans.db.keyspaces.hotels.HotelAddress();
+        hotelAddressUDT.setCity(hotelAddress.getCity());
+        hotelAddressUDT.setState(hotelAddress.getState());
+        hotelAddressUDT.setCountry(hotelAddress.getCountry());
+        hotelAddressUDT.setZipCode(hotelAddress.getZipCode());
+
+        return hotelAddressUDT;
+    }
 }
